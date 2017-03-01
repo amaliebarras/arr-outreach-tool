@@ -27,7 +27,7 @@ img {
 }
 
   // Base Colors
-  $shade-10: #2c3e50 !default;
+  $shade-10: #A86EDD !default;
   $shade-1: #d7dcdf !default;
   $shade-0: #fff !default;
   $teal: #1abc9c !default;
@@ -61,7 +61,7 @@ img {
 
   $range-handle-color: $shade-10 !default;
   $range-handle-color-hover: $teal !default;
-  $range-handle-size: 20px !default;
+  $range-handle-size: 40px !default;
 
   $range-track-color: $shade-1 !default;
   $range-track-height: 10px !default;
@@ -77,7 +77,8 @@ img {
 
   .range-slider__range {
     -webkit-appearance: none;
-    width: calc(100% - (#{$range-label-width + 13px}));
+    // width: calc(100% - (#{$range-label-width + 13px}));
+    width: 100%;
     height: $range-track-height;
     border-radius: 5px;
     background: $range-track-color;
@@ -126,7 +127,7 @@ img {
 
   // Range Label
   .range-slider__value {
-    display: inline-block;
+    display: none;
     position: relative;
     width: $range-label-width;
     color: $shade-0;
