@@ -3,6 +3,9 @@
 ---
 
 // base fonts
+* {
+  font-family: Roboto;
+}
 h2 {
   font-size: 18px;
 }
@@ -15,6 +18,14 @@ $teal: #1abc9c !default;
 
 // link button style
 a {
+  background-color: $teal;
+  color: $shade-0;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+button {
+  border: none;
   background-color: $teal;
   color: $shade-0;
   padding: 10px;
@@ -203,5 +214,43 @@ img {
     float: right;
     display: inline;
     text-align: right;
+  }
+}
+
+// resources styles
+.resourcespage {
+  padding: 10px 32px;
+  .assets {
+    width: 75%;
+    float: left;
+      .asset {
+        float: left;
+        margin-right: 20px;
+        border: 3px solid $shade-1;
+        padding: 0 5px;
+        img {
+            height: 50px;
+            width: auto;
+        }
+      }
+      div.selected {
+          border: 3px solid $teal;
+      }
+      div:hover {
+          cursor: pointer;
+      }
+
+      #galleryHeader {
+          display: none;
+      }
+    }
+  .form {
+    #comment {
+      height: 100px;
+    }
+    width: 25%;
+    float: left;
+    background-color: #c1b1b1;
+    text-align: center;
   }
 }
