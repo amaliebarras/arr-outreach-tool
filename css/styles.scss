@@ -2,12 +2,28 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
+// Import partials from `sass_dir` (defaults to `_sass`)
+
+@import
+    'grid'
+;
+
 // base fonts
 * {
   font-family: Roboto;
+  margin-top: 0;
 }
+
+p {
+  font-size: 16px;
+}
+
 h2 {
-  font-size: 18px;
+  font-size: 20px;
+}
+
+h3 {
+ font-size: 18px;
 }
 
 // Base Colors
@@ -93,11 +109,6 @@ img {
 
   body {
     font-family: Roboto;
-    // padding: 20px 20px;
-
-    @media (min-width: 600px) {
-      // padding: 30px;
-    }
   }
 
   .range-slider {
@@ -219,15 +230,24 @@ img {
 
 // resources styles
 .resourcespage {
-  padding: 10px 32px;
+  padding: 10px;
   .assets {
+    padding: 0 10px;
     width: 75%;
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
     float: left;
+    box-sizing: border-box;
       .asset {
+        box-sizing: border-box;
         float: left;
-        margin-right: 20px;
+        margin-right: 10px;
+        width: 20%;
+        height: 200px;
         border: 3px solid $shade-1;
-        padding: 0 5px;
+        padding: 5px;
+        margin-bottom: 10px;
         img {
             height: 50px;
             width: auto;
@@ -243,14 +263,24 @@ img {
       #galleryHeader {
           display: none;
       }
+      #reset {
+        background-color: $teal;
+        float: right;
+      }
     }
-  .form {
+  #form {
+    padding: 10px;
+    width: 25%;
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
     #comment {
       height: 100px;
+      text-align: top;
     }
-    width: 25%;
+    text-align: center;
+    box-sizing: border-box;
     float: left;
     background-color: #c1b1b1;
-    text-align: center;
   }
 }

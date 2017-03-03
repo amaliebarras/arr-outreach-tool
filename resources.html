@@ -6,40 +6,74 @@ permalink: /resources.html
 <div class = "resourcespage">
 
   <div class = "assets">
+    <!-- <button id="reset">Clear Selection</button> -->
     <div id="galleryHeader"></div>
-    <div id="gallery">
-    <!-- <img src="http://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg" />
-    <img src="http://mirrors.rit.edu/CTAN/macros/latex/contrib/incgraph/example.jpg" />
-    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/HTML_source_code_example.svg/315px-HTML_source_code_example.svg.png" />
-    <img src="http://t0.gstatic.com/images?q=tbn:ANd9GcQ7F-2LZB83RcmOfsBynfGT5S7k0fNpGrsywIlem1WQGfKca0bp6Q" />
-    <img src="https://pbs.twimg.com/profile_images/447372216133758978/PRwNTMkI.jpeg" /> -->
-	    <!-- <form action=""> -->
+      <div class = "row" id="gallery">
+  	    <!-- <form action=""> -->
+          <h2>Improve your recycling IQ with these reference materials.</h3>
 
-		  {% for info in site.data.work %}
-          <div class = "asset">
-            <h3>{{ info.title }}</h3>
-            <img src = "{{ info.imageurl }}" />
-            <p>{{ info.description }}</p>
-            <!-- <input type="checkbox" name="asset" value="{{ info.title }}"> -->
-            </br>
-          </div>
-
-    	{% endfor %}
+    		  {% for info in site.data.work %}
+            {% if info.knowledge %}
+              <div class = "asset">
+                <h3>{{ info.title }}</h3>
+                <img src = "{{ info.imageurl }}" />
+                <p>{{ info.description }}</p>
+                </br>
+              </div>
+              {% endif %}
+        	{% endfor %}
+        </div>
       <!-- </form> -->
-    </div>
+      <div class = "row" id="gallery">
+        <h2>How about some new ideas for your setup?</h3>
+
+        {% for info in site.data.work %}
+          {% if info.ability %}
+            <div class = "asset">
+              <h3>{{ info.title }}</h3>
+              <img src = "{{ info.imageurl }}" />
+              <p>{{ info.description }}</p>
+              <!-- <input type="checkbox" name="asset" value="{{ info.title }}"> -->
+              </br>
+            </div>
+            {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class = "row" id="gallery">
+        <h2>Get fired up with these motivating resources.</h3>
+
+        {% for info in site.data.work %}
+          {% if info.motivation %}
+            <div class = "asset">
+              <h3>{{ info.title }}</h3>
+              <img src = "{{ info.imageurl }}" />
+              <p>{{ info.description }}</p>
+              <!-- <input type="checkbox" name="asset" value="{{ info.title }}"> -->
+              </br>
+            </div>
+            {% endif %}
+        {% endfor %}
+      </div>
   </div>
 
   <div id="form">
-      <div>Email Address
-          <input id="email" />
+      <div>
+          <input id="email" placeholder="Email Address" />
       </div>
-      <div>Message
-          <input id="comment" />
+      <div>
+          <input id="comment" placeholder="Note"/>
       </div>
-      <button id="create">Create Album</button>
-      <button id="reset">Clear Selection</button>
+      <p>
+        <input type="checkbox" id="cbox1" value="email_optin">
+        <label for="cbox1">Sign me up for the city's official recycling monthly e-Newsletter.</label>
+      </p>
+
+      <button id="create">Send</button>
   </div>
 
+
+<!-- Code below sourced from here. http://jsfiddle.net/9z3gL/ -->
 <script>
 $(function () {
     $("#gallery > div").click(function () {
