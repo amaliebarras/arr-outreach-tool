@@ -245,19 +245,19 @@ img {
         margin-right: 10px;
         width: 20%;
         @media (max-width: 1024px) {
-          width: 45%;
+          width: 40%;
         }
         height: 200px;
-        border: 3px solid $shade-1;
+        border: 5px solid $shade-1;
         padding: 5px;
         margin-bottom: 10px;
         img {
-            height: 50px;
             width: auto;
+            height: 100px;
         }
       }
       div.selected {
-          border: 3px solid $teal;
+          border: 5px solid $teal;
       }
       div:hover {
           cursor: pointer;
