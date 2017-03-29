@@ -16,7 +16,7 @@ var systemInput = document.getElementById('systemSlider');
 var motivationInput = document.getElementById('motivationSlider');
 
 function submitSliderValues(knowledge, system, motivation) {
-  firebase.database().ref('sliders/').push({
+  return firebase.database().ref('sliders/').push({
     knowledge: knowledge,
     system: system,
     motivation: motivation
@@ -38,6 +38,8 @@ window.addEventListener('load', function() {
     var system = systemInput.value;
     var motivation = motivationInput.value;
 
-    submitSliderValues(knowledge, system, motivation);
+    submitSliderValues(knowledge, system, motivation).then(function() {
+      location = "./resources.html";
+    });
   };
 }, false);
