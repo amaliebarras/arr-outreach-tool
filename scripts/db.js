@@ -38,8 +38,9 @@ window.addEventListener('load', function() {
     var knowledge = knowledgeInput.value;
     var system = systemInput.value;
     var motivation = motivationInput.value;
+    var date = new Date();
 
-    submitSliderValues(knowledge, system, motivation, Date.now()).then(function() {
+    submitSliderValues(knowledge, system, motivation, date.toLocaleDateString() + " " + date.toLocaleTimeString()).then(function() {
       location = "./resources.html";
     });
   };
