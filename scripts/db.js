@@ -15,11 +15,12 @@ var knowledgeInput = document.getElementById('knowledgeSlider');
 var systemInput = document.getElementById('systemSlider');
 var motivationInput = document.getElementById('motivationSlider');
 
-function submitSliderValues(knowledge, system, motivation) {
+function submitSliderValues(knowledge, system, motivation, timestamp) {
   return firebase.database().ref('sliders/').push({
     knowledge: knowledge,
     system: system,
-    motivation: motivation
+    motivation: motivation,
+    timestamp: timestamp
   });
 };
 
@@ -38,7 +39,7 @@ window.addEventListener('load', function() {
     var system = systemInput.value;
     var motivation = motivationInput.value;
 
-    submitSliderValues(knowledge, system, motivation).then(function() {
+    submitSliderValues(knowledge, system, motivation, Date.now()).then(function() {
       location = "./resources.html";
     });
   };
