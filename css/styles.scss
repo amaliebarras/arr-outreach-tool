@@ -64,6 +64,13 @@ button {
   padding: 10px 32px;
 }
 
+.actions {
+  text-align: center;
+  #reset {
+    background-color: #aaa;
+  }
+}
+
 
 // slider styles
 .sliderpage {
@@ -222,7 +229,6 @@ img {
     border: 0;
   }
   .button-right {
-    float: right;
     display: inline;
     text-align: right;
   }

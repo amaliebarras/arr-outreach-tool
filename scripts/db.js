@@ -11,7 +11,7 @@ var config = {
 firebase.initializeApp(config);
 
 var sliderForm = document.getElementById('sliderForm');
-var knowledgeInput = document.getElementById('knowledgeSlider');  
+var knowledgeInput = document.getElementById('knowledgeSlider');
 var systemInput = document.getElementById('systemSlider');
 var motivationInput = document.getElementById('motivationSlider');
 
@@ -39,7 +39,7 @@ window.addEventListener('load', function() {
     var motivation = motivationInput.value;
 
     submitSliderValues(knowledge, system, motivation).then(function() {
-      location = "./resources.html";
+      location = "./";
     });
   };
 }, false);

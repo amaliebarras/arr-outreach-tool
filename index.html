@@ -1,11 +1,80 @@
 ---
 layout: default
-title: About
+title: My Recycling Habits
+permalink: /
 ---
-<div class = "aboutpage">
-<h1>Austin Resource Recovery Outreach Tool </h1>
 
-<p>Use this tool to help us give you relevant information to your personal situation.</p>
+<div class = "sliderpage">
+	<form id="sliderForm">
+	    <div class = "slider">
+	      <h2>How much do you know
+	      about what items can be recycled in Austin?</h2>
+	      <span class = "emoji-left">
+	          <img src = "./images/emoji/k1.png">
+	          <p>I don't know anything...</p>
+	      </span>
 
-<a href = "./myrecyclinghabits.html">Start!</a>
+	      <div class = "emoji-right">
+	          <img  src = "./images/emoji/k2.png">
+	          <p>I know everything!</p>
+	      </div>
+
+	      <div class="range-slider">
+	        <input id="knowledgeSlider" class="range-slider__range" type="range" value="5" min="0" max="10">
+	        <span class="range-slider__value">0</span>
+	      </div>
+	    </div>
+
+	    <div class = "slider" id = "slider2">
+	      <h2>Do you have a setup
+	      for recycling at home?</h2>
+
+	      <div class = "emoji-left">
+	          <img src = "./images/emoji/s1.png">
+	          <p>I don't have a system at all...</p>
+	      </div>
+
+	      <div class = "emoji-right">
+	          <img  src = "./images/emoji/s2.png">
+	          <p>I have a perfect system!</p>
+	      </div>
+
+	      <div class="range-slider">
+	        <input id="systemSlider" class="range-slider__range" type="range" value="5" min="0" max="10">
+	        <span class="range-slider__value">0</span>
+	      </div>
+	    </div>
+
+	    <div class = "slider">
+	      <h2>How motivated are you
+	      to recycle?</h2>
+
+	      <div class = "emoji-left">
+	          <img src = "./images/emoji/m1.png">
+	          <p>I don't care at all</p>
+	      </div>
+
+	      <div class = "emoji-right">
+	          <img  src = "./images/emoji/m2.png">
+	          <p>I care a whole lot</p>
+	      </div>
+
+	      <div class="range-slider">
+	        <input id="motivationSlider" class="range-slider__range" type="range" value="5" min="0" max="10">
+	        <span class="range-slider__value">0</span>
+	      </div>
+	    </div>
+
+		<div class = "actions">
+		<a id = "reset" href = "./">Reset</a>
+		<!-- <a class = "button-right" id="nextButton" href = "./resources.html">Next</a> -->
+		<button type="submit" class="button-right">Submit</button>
+		</actions>
+	</form>
 </div>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+<script src="scripts/db.js"></script>
+<script src="scripts/slider.js"></script>
