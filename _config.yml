@@ -16,11 +16,11 @@
 title: Austin Resource Recovery Outreach Tool
 email: amalie.barras@austintexas.gov
 description: > # this means to ignore newlines until "baseurl:"
-  A conversation guide and lead generation tool for Austin Resource Recovery
+  A conversation tool for Austin Resource Recovery
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: civiqueso
-github_username: amaliebarras
+github_username: cityofaustin
 
 # Build settings
 markdown: kramdown
