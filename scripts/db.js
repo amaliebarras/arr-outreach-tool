@@ -2,16 +2,16 @@
 
 // Initialize Firebase
 var config = {
-apiKey: "AIzaSyBDAPLC_v8wvbQGsGPTQfQTnZNKi_J9s_c",
-authDomain: "arr-outreach-tool.firebaseapp.com",
-databaseURL: "https://arr-outreach-tool.firebaseio.com",
-storageBucket: "arr-outreach-tool.appspot.com",
-messagingSenderId: "155159530979"
-};
+    apiKey: "AIzaSyAoYcZDncfwA2gLuqTMq64-LyEml5HIMq8",
+    authDomain: "arr-outreach-tool-4a622.firebaseapp.com",
+    databaseURL: "https://arr-outreach-tool-4a622.firebaseio.com",
+    storageBucket: "arr-outreach-tool-4a622.appspot.com",
+    messagingSenderId: "162375636414"
+  };
 firebase.initializeApp(config);
 
 var sliderForm = document.getElementById('sliderForm');
-var knowledgeInput = document.getElementById('knowledgeSlider');  
+var knowledgeInput = document.getElementById('knowledgeSlider');
 var systemInput = document.getElementById('systemSlider');
 var motivationInput = document.getElementById('motivationSlider');
 
@@ -41,7 +41,7 @@ window.addEventListener('load', function() {
     var date = new Date();
 
     submitSliderValues(knowledge, system, motivation, date.toLocaleDateString() + " " + date.toLocaleTimeString()).then(function() {
-      location = "./resources.html";
+      location = "./";
     });
   };
 }, false);
